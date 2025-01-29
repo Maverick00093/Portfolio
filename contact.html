@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <h1>BANSI <br>DAVARIYA</h1>
+            <div class="links">
+                <a href="index.html" id="index">HOME</a>
+                <a href="gallery.html" id="gallery">GALLERY</a>
+                <a href="about.html" id="about">ABOUT</a>
+                <a href="contact.html" id="contact">CONTACT</a>
+            </div>
+            <div class="subs">
+                <label for="">SUBSCRIBE FOR NEWSLETTER</label>
+                <input type="email" name="" id="" placeholder="Enter Email Address">
+            </div>
+        </div>
+        <div class="form">
+            <div class="container">
+                <div class="contact-info" >
+                    <h2 data-aos="fade-down">Let's get in touch</h2>
+                    <p data-aos="fade-down">We're open for any suggestion or just to have a chat</p>
+                    <p data-aos="fade-right"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"><span class="icon"><i class="fa-solid fa-location-dot fa-2xl" style="color: #000000;"></i></span><span>Address:</span> Anand, 388120</p>
+                    <p data-aos="fade-right"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"><span class="icon"><i class="fa-solid fa-phone fa-2xl" style="color: #000000;"></i></span><span>Phone:</span> +1235 2355 98</p>
+                    <p data-aos="fade-right"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"><span class="icon"><i class="fa-solid fa-envelope fa-2xl" style="color: #000000;"></i></span><span>Email:</span> info@yoursite.com</p>
+                    <p data-aos="fade-right"
+                    data-aos-offset="300"
+                    data-aos-easing="ease-in-sine"><span class="icon"><i class="fa-brands fa-linkedin fa-2xl" style="color: #000000;"></i></span><span>Linked In:</span> Bansi Davariya</p>
+                </div>
+                <div class="contact-form">
+                    <h2 data-aos="zoom-in">GET IN TOUCH</h2>
+                    <form data-aos="zoom-in">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" placeholder="Name" required>
+        
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+        
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Subject">
+        
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Message"></textarea>
+        
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="backToTop" style="
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        z-index: 1000;
+    ">
+        ↑
+    </button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+        // Back to Top button functionality
+        const backToTopButton = document.getElementById('backToTop');
+
+        // Show button when scrolling down
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                backToTopButton.style.display = 'flex';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        // Scroll back to top when button is clicked
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

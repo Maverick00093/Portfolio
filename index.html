@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <h1>BANSI <br>DAVARIYA</h1>
+            <div class="links">
+                <a href="index.html" id="index">HOME</a>
+                <a href="gallery.html" id="gallery">GALLERY</a>
+                <a href="about.html" id="about">ABOUT</a>
+                <a href="contact.html" id="contact">CONTACT</a>
+            </div>
+            <div class="subs">
+                <label for="">SUBSCRIBE FOR NEWSLETTER</label>
+                <input type="email" name="" id="" placeholder="Enter Email Address">
+            </div>
+        </div>
+        <div class="overview">
+            <div class="one">
+                <div class="o_img"><img src="https://www.pngkit.com/png/detail/222-2229518_html-css-icon-png.png" alt="" data-aos="flip-left" data-aos-duration="1000"></div>
+                <div class="o_text" data-aos="fade-up"
+                data-aos-duration="1000">
+                    <h1>HTML & CSS</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, repellendus ratione quidem at consequatur doloremque numquam ad quae enim! Libero magnam odit perferendis vitae commodi soluta laboriosam non deserunt neque!</p>
+                    <a href="gallery.html"><button>View Project</button></a>
+                </div>
+            </div>
+            <div class="two">
+                <div class="t_text" data-aos="fade-up"
+                data-aos-duration="1000">
+                    <h1>JAVA SCRIPT</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste quia modi magnam architecto illo fuga dolorem nostrum ex numquam accusantium natus amet laudantium, corrupti, maiores reprehenderit iure? Vitae, nihil laboriosam!</p>
+                    <a href="gallery.html"><button>View Project</button></a>
+                </div>
+                <div class="t_img"><img src="https://st4.depositphotos.com/28687978/40223/v/450/depositphotos_402238810-stock-illustration-letter-logo-design-initial-letter.jpg" alt="" data-aos="flip-right" data-aos-duration="1000"></div>
+            </div>
+            <div class="three">
+                <div class="tr_img"><img src="https://img.freepik.com/premium-vector/dsa-logo-dsa-letter-dsa-letter-logo-design-initials-dsa-logo-linked-with-circle-uppercase-monogram-logo-dsa-typography-technology-business-real-estate-brand_229120-63844.jpg" alt="" data-aos="flip-left" data-aos-duration="1000"></div>
+                <div class="tr_text" data-aos="fade-up"
+                data-aos-duration="1000">
+                    <h1>DSA (C++)</h1>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus mollitia aperiam, numquam nihil dolorem beatae consectetur ab suscipit pariatur cum esse saepe deleniti sint deserunt natus dolores vel debitis commodi?</p>
+                    <a href="gallery.html"><button>View Project</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="backToTop" style="
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: #000000;
+        color: rgb(255, 225, 0);
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        z-index: 1000;
+    ">
+        ↑
+    </button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+        // Back to Top button functionality
+        const backToTopButton = document.getElementById('backToTop');
+
+        // Show button when scrolling down
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                backToTopButton.style.display = 'flex';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        // Scroll back to top when button is clicked
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!--============================================= https://mellow-gingersnap-34328b.netlify.app/=================== -->

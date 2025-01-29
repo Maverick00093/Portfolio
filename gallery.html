@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="main">
+      <div class="nav">
+        <h1>BANSI <br />DAVARIYA</h1>
+        <div class="links">
+          <a href="index.html" id="index">HOME</a>
+                <a href="gallery.html" id="gallery">GALLERY</a>
+                <a href="about.html" id="about">ABOUT</a>
+                <a href="contact.html" id="contact">CONTACT</a>
+        </div>
+        <div class="subs">
+          <label for="">SUBSCRIBE FOR NEWSLETTER</label>
+          <input type="email" name="" id="" placeholder="Enter Email Address" />
+        </div>
+      </div>
+      <div class="head">
+        <div class="dropdown">
+          <select name="project" id="project">
+            <option value="all">ALL</option>
+            <option value="h&c">HTML & CSS</option>
+            <option value="js">JAVASCRIPT</option>
+            <option value="dsa">DSA(C++)</option>
+          </select>
+          <h1>Gallary</h1>
+        </div>
+        <div class="items">
+          <div class="html_css">
+            <div class="box1">
+              <a href="https://github.com/Maverick00093/html-/blob/main/chess.html"><img src="Screenshot 2025-01-25 163009.png" alt="html_css" ></a>
+              <h2 >CHESS</h2>
+            </div>
+            <div class="box1">
+              <a href="https://github.com/Maverick00093/css-exam/blob/main/profilecard.html"><img src="Screenshot 2025-01-28 135444.png" alt="html_css" ></a>
+              <h2 >PROFILE CARD</h2>
+            </div>
+            <div class="box1">
+              <a href="https://github.com/Maverick00093/css-project/blob/main/grid5.html"><img src="Screenshot 2025-01-28 135612.png" alt="html_css" ></a>
+              <h2 >TRUSTPILOT</h2>
+            </div>
+          </div>
+          <div class="dsa">
+            <div class="box2">
+              <a href="https://github.com/Maverick00093/C-PROGRAMS/blob/e7288fd5d49d2b5ec39f4b1402fbb6285ed92815/61%20bank_system.cpp#L4"><img src="bank.png" alt="html_css" ></a>
+              <h2 >BANK SYSTEM</h2>
+            </div>
+            <div class="box2">
+              <a href="https://github.com/Maverick00093/C-PROGRAMS/blob/main/11menu.cpp"><img src="menu.png" alt="html_css" ></a>
+              <h2 >MENU</h2>
+            </div>
+            <div class="box2">
+              <a href="https://github.com/Maverick00093/C-PROGRAMS/blob/e7288fd5d49d2b5ec39f4b1402fbb6285ed92815/36%20Tic%20Tac%20Toe.cpp"><img src="tic tac toe.png" alt="html_css" ></a>
+              <h2 >TIC TAC TOE</h2>
+            </div>
+            </div>
+          </div>
+          <div class="js">
+            <div class="box3">
+              <a href="https://github.com/Maverick00093/Drum-kit-Rock-Paper-Scissor/blob/main/drum_kit.html"><img src="drum.png" alt="html_css" ></a>
+              <h2 >DRUM KIT</h2>
+            </div>
+            <div class="box3">
+              <a href="https://github.com/Maverick00093/Login-SignUp/blob/main/Update_login.html"><img src="login.png" alt="html_css" ></a>
+              <h2 >LOGIN & SIGNUP</h2>
+            </div>
+            <div class="box3">
+              <a href="https://github.com/Maverick00093/JS-PROJECT-2/blob/main/grad.html"><img src="grad.png" alt="html_css" ></a>
+              <h2 >GRAD CALCULATOR</h2>
+            </div>
+            <div class="box3">
+              <a href="https://github.com/Maverick00093/Drum-kit-Rock-Paper-Scissor/blob/main/RockPaperScissor.html"><img src="RPS.png" alt="html_css" ></a>
+              <h2 >ROCK PAPER SCISSOR</h2>
+            </div>
+            <div class="box3">
+              <a href="https://github.com/Maverick00093/JS-PROJECT-2/blob/main/billing.html"><img src="billing.png" alt="html_css"></a>
+              <h2 >BILLING</h2>
+            </div>
+            <div class="box3">
+              <a href="https://github.com/Maverick00093/JS-PROJECT-2/blob/main/salary.html"><img src="salary.png" alt="html_css"></a>
+              <h2 >SALARY CALCULATE</h2>
+            </div>
+          </div>
+        </div>
+        <div class="footer">
+          <h1>THANK YOU...</h1>
+        </div>
+      </div>
+    </div>
+    <button id="backToTop" style="
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        z-index: 1000;
+    ">
+        ↑
+    </button>
+    <script>
+      const projectDropdown = document.getElementById("project");
+      const htmlCssProjects = document.querySelector(".html_css");
+      const jsProjects = document.querySelector(".js");
+      const dsaProjects = document.querySelector(".dsa");
+      const itemsContainer = document.querySelector(".items");
+    
+      function filterProjects() {
+        // First, hide all categories
+        htmlCssProjects.style.display = "none";
+        jsProjects.style.display = "none";
+        dsaProjects.style.display = "none";
+    
+        // Clear the container and show the selected category
+        itemsContainer.innerHTML = "";
+    
+        if (projectDropdown.value === "all") {
+          // Show all categories in original order
+          itemsContainer.appendChild(htmlCssProjects);
+          itemsContainer.appendChild(jsProjects);
+          itemsContainer.appendChild(dsaProjects);
+    
+          htmlCssProjects.style.display = "flex";
+          jsProjects.style.display = "flex";
+          dsaProjects.style.display = "flex";
+        } else if (projectDropdown.value === "h&c") {
+          itemsContainer.appendChild(htmlCssProjects);
+          htmlCssProjects.style.display = "flex";
+        } else if (projectDropdown.value === "js") {
+          itemsContainer.appendChild(jsProjects);
+          jsProjects.style.display = "flex";
+        } else if (projectDropdown.value === "dsa") {
+          itemsContainer.appendChild(dsaProjects);
+          dsaProjects.style.display = "flex";
+        }
+      }
+    
+      // Run the function whenever the dropdown changes
+      projectDropdown.addEventListener("change", filterProjects);
+    
+      // Run the function initially to set the default view
+      filterProjects();
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+      // Back to Top button functionality
+      const backToTopButton = document.getElementById('backToTop');
+
+// Show button when scrolling down
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 200) {
+        backToTopButton.style.display = 'flex';
+    } else {
+        backToTopButton.style.display = 'none';
+    }
+});
+
+// Scroll back to top when button is clicked
+backToTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+    </script>
+  </body>
+</html>

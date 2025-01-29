@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"> <!-- AOS CSS -->
+</head>
+<body>
+    <div class="main">
+        <div class="nav">
+            <h1>BANSI <br>DAVARIYA</h1>
+            <div class="links">
+                <a href="index.html" id="index">HOME</a>
+                <a href="gallery.html" id="gallery">GALLERY</a>
+                <a href="about.html" id="about">ABOUT</a>
+                <a href="contact.html" id="contact">CONTACT</a>
+            </div>
+            <div class="subs">
+                <label for="">SUBSCRIBE FOR NEWSLETTER</label>
+                <input type="email" name="" id="" placeholder="Enter Email Address">
+            </div>
+        </div>
+        <div class="my_self">
+            <div class="container" id="about">
+                <div class="left" data-aos="fade-down">
+                    <img src="https://i.pinimg.com/550x/8c/74/d5/8c74d5aebcdede9c8d2db372bb729a02.jpg" alt="Profile Image">
+                </div>
+                <div class="right" data-aos="zoom-in-left">
+                    <h1>Hello! I'm <span>Bansi Davariya</span> Student At Red and White Multimedia Education</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non voluptatem totam repellendus, sunt dolore blanditiis tempore! Est necessitatibus rerum nobis doloribus deleniti, iure et ipsam at voluptatum sint libero provident!</p>
+                    <div class="team">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button id="backToTop" style="
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        z-index: 1000;
+    ">
+        ↑
+    </button>
+    <!-- AOS Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+        // Back to Top button functionality
+        const backToTopButton = document.getElementById('backToTop');
+
+        // Show button when scrolling down
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                backToTopButton.style.display = 'flex';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        // Scroll back to top when button is clicked
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
